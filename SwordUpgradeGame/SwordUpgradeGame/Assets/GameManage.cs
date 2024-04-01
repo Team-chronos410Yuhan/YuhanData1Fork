@@ -110,6 +110,9 @@ public class GameManage : MonoBehaviour
     void Start()
     {
         //!!!csv파일 생성하는 문구 넣어야됨(맨 윗 라인)
+        FileStream LogFile = File.Create("Log_" + DateTime.Now + ".csv");
+        LogFile.WriteLine("시간,행동,결과,소지금,레벨,강화비용,성공확률,가격");
+        LogFile.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7}", DateTime.Now, , );
         //!!!게임 시작 로그
         playerMoney = 1000;
         ResetWeapon();
